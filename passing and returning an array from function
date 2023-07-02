@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+int  *compareTriplets(int a[3],int b[3]);
+int main(void)
+{
+    int a[3],b[3],i,j;
+    for(i=0;i<3;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<3;i++)
+    {
+        cin>>b[i];
+    }
+    int *p=compareTriplets(a,b);
+    for(i=0;i<2;i++)
+    {
+        cout<<p[i]<<" ";
+    }
+    return 0;
+    
+}
+
+int  *compareTriplets(int a[],int b[])
+{
+    int i,j=0,k=0;
+    static int arr[2];
+    for(i=0;i<3;i++)
+    {
+        if(a[i]>b[i])
+        {
+            j++;
+            
+        }
+        else if(a[i]<b[i])
+        {
+            k++;
+            
+        }
+    }
+    arr[0]=j;
+    arr[1]=k;
+    return arr;
+}
