@@ -20,11 +20,11 @@ int main(void)
 
 int binarySearch(int arr[],int n,int key)
 {
-    int s=0,e=n,mid;
+    int s=0,e=n-1,mid;
 
-    while(s<=n)
+    while(s<=e)
     {
-        mid=(s+n)/2;
+        mid=(s+e)/2;
         if(arr[mid]==key)
         {
             return mid;
